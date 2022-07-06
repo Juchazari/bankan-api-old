@@ -1,0 +1,12 @@
+export { DatabaseModule } from './database';
+export { RedisModule, REDIS } from './redis';
+export { AuthModule } from './auth';
+export { UsersModule } from './users';
+export { FilesModule } from './files';
+export { BoardGroupsModule } from './board-groups';
+export { BoardsModule } from './boards';
+export { SectionsModule } from './sections';
+export { TasksModule } from './tasks';
+export { LabelsModule } from './labels';
+export { CommentsModule } from './comments';
+export { AttachmentsModule } from './attachmets';
