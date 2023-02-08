@@ -11,8 +11,6 @@ async function bootstrap(): Promise<void> {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   const configService = app.get(ConfigService);
 
-  app.set('trust proxy', 1);
-
   app.enableVersioning({
     type: VersioningType.URI,
     defaultVersion: '1'

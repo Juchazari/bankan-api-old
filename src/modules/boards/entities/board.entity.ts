@@ -2,10 +2,8 @@ import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn,
   ManyToOne,
   OneToMany,
-  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn
 } from 'typeorm';
@@ -23,9 +21,6 @@ export class Board {
   @Column()
   public name: string;
 
-  @Column({ type: 'text', nullable: true })
-  public description: string;
-
   @ManyToOne(() => User, (user) => user.boards, { onDelete: 'CASCADE' })
   public owner: User;
 
@@ -37,10 +32,6 @@ export class Board {
 
   @OneToMany(() => Section, (section) => section.board)
   public sections: Section[];
-
-  @OneToOne(() => File, { nullable: true })
-  @JoinColumn()
-  public icon: File;
 
   @Column()
   @CreateDateColumn()

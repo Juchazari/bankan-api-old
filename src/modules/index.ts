@@ -1,5 +1,4 @@
 export { DatabaseModule } from './database';
-export { RedisModule, REDIS } from './redis';
 export { AuthModule } from './auth';
 export { UsersModule } from './users';
 export { FilesModule } from './files';
